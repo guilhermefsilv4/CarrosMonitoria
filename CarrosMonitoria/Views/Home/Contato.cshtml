@@ -1,0 +1,77 @@
+﻿@model CarrosMonitoria.Models.Contato
+
+<head><link rel="stylesheet" href="~/css/contato.css"></head>
+
+
+<header>
+    <nav class="navbar navbar-light">
+        <a asp-action="Index">Home</a>
+        <a asp-action="Carros">Carros</a>
+        <a asp-action="Cadastro">Cadastro</a>
+        <a asp-action="Contato">Contato</a>
+        <a asp-action="Compras">Compras</a>
+    </nav>
+</header>
+
+<main class="container">
+    <h2 class="text-center my-4">Contato</h2>
+    <div class="divComentario">
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <p>caio@gmail.com</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A quia fugiat quis ea rem totam nostrum velit placeat, doloribus laboriosam iusto, adipisci facere, praesentium est error et veniam repudiandae dolorem.</p>
+                <div class="divOptions">
+                    <a href="#"><span class="badge"><i class="bi bi-pencil-square"></i></span></a>
+                    <a href="#"><span class="badge"><i class="bi bi-trash"></i></span></a>
+                </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <p>pamonha@group.com</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora incidunt recusandae corporis quos modi natus.</p>
+                <div class="divOptions">
+                    <a href="#"><span class="badge"><i class="bi bi-pencil-square"></i></span></a>
+                    <a href="#"><span class="badge"><i class="bi bi-trash"></i></span></a>
+                </div>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <p>sp@gmail.com</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam porro assumenda, voluptates, nam dicta saepe blanditiis sit minus eos minima amet commodi nulla corporis quis ducimus enim temporibus consequatur consectetur!</p>
+                <div class="divOptions">
+                    <a href="#"><span class="badge"><i class="bi bi-pencil-square"></i></span></a>
+                    <a href="#"><span class="badge"><i class="bi bi-trash"></i></span></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <form asp-action="Create" method="post">
+        <div class="divContato">
+            <div class="row">
+                <div class="col-12 col-sm">
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" asp-for="Email" class="form-control" placeholder="Digite seu email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Mensagem">Mensagem</label>
+                            <textarea class="form-control" asp-for="Mensagem" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btnContato">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-12 col-sm">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed unde et ipsam est aliquid atque dolore quod
+                        quas nesciunt modi labore consequuntur exercitationem, fuga doloremque consectetur aspernatur omnis
+                        quisquam
+                        praesentium!
+                    </p>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non quam obcaecati laborum pariatur corporis,
+                        quaerat mollitia illum? Adipisci rerum doloremque porro esse tenetur ea, at nesciunt, labore consequuntur
+                        reprehenderit tempora.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
+</main>
